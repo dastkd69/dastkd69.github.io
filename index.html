@@ -22,6 +22,27 @@
     ::-webkit-scrollbar-thumb {
     background: rgba(161, 255, 20, 0.8);
     }
+
+    @media screen and (max-width: 768px) {
+        #nameBlock {
+            margin-left: 0vw;
+        }
+        #skillBlock {
+            margin-left: 0vw;
+            margin-top: 200vh;
+        }
+        #workBlock {
+            margin-left: 0vw;
+        }
+        #footer {
+            margin-left: 0vw;
+        }
+        .tagcloud {  
+            font-size: 0.1rem;
+            font-weight: 650;
+        }
+
+    }    
 </style>
 <body class="position-relative" style="color: whitesmoke; padding: 1rem; padding-top: 0rem; background: url('./static/pics/bgART.jpg') no-repeat center center fixed;">
     <nav class="navbar navbar-expand-lg bg-opacity-50 justify-content-end" style="background-color: rgba(2, 37, 20, 0.11);">
@@ -108,7 +129,7 @@
                             'C', 'C++', 'Pytorch',
                             'Python', 'Java', 'Git',
                             'Rust', 'Qiskit', 'ANNs',
-                            'Mongo', 'SQL', 'Redis',
+                            'Mongo', 'SQL', 'Redis',    
                         ];
         // var tagCloud = TagCloud('.content', myTags);
         var tagCloud = TagCloud('.sphere', myTags,{

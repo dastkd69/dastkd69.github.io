@@ -11,40 +11,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Tridib Das</title>
 </head>
-<style>
-    /* scrollbar*/
-    ::-webkit-scrollbar {
-    background: rgb(0, 0, 0);
-    width: 0.5rem;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: rgba(161, 255, 20, 0.8);
-    }
-
-    @media screen and (max-width: 768px) {
-        #nameBlock {
-            margin-left: 0vw;
-        }
-        #skillBlock {
-            margin-left: 0vw;
-            margin-top: 200vh;
-        }
-        #workBlock {
-            margin-left: 0vw;
-        }
-        #footer {
-            margin-left: 0vw;
-        }
-        .tagcloud {  
-            font-size: 0.1rem;
-            font-weight: 650;
-        }
-
-    }    
-</style>
 <body class="position-relative" style="color: whitesmoke; padding: 1rem; padding-top: 0rem; background: url('./static/pics/bgART.jpg') no-repeat center center fixed;">
+    <style>
+        /* scrollbar*/
+        ::-webkit-scrollbar {
+        background: rgb(0, 0, 0);
+        width: 0.5rem;
+        }
+    
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgba(161, 255, 20, 0.8);
+        }
+    
+        @media only screen and (max-width: 768px) {
+            #nameBlock {
+                margin-left: 0vw;
+            }
+            #skillBlock {
+                margin-left: 0vw;
+                margin-top: 300vh;
+                max-width: 100vw;
+            }
+            #workBlock {
+                margin-left: 0vw;
+                flex-direction: column;
+            }
+            #footer {
+                margin-left: 0vw;
+            }
+            .tagcloud {  
+                font-size: 0.1rem;
+                font-weight: 650;
+            }
+    
+        }    
+    </style>
     <nav class="navbar navbar-expand-lg bg-opacity-50 justify-content-end" style="background-color: rgba(2, 37, 20, 0.11);">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="index.html" class="nav-link" style="color: whitesmoke;">Achievements</a></li>
@@ -65,7 +67,7 @@
                 <span class="sphere"></span>
             </div>
         </div>
-        <div id="workBlock" class="position-absolute d-flex justify-content-center align-items-center" style="margin-left: 0vw; margin-top: 250vh;">
+        <div id="workBlock" class="position-absolute d-flex flex-wrap justify-content-center align-items-center" style="margin-left: 0vw; margin-top: 250vh;">
             <div style="padding: 2rem;">
                 <img src="./static/pics/Scene.png" class="card-img-top" alt="..." style="max-height: 15rem;">
                 <div class="card-body">
@@ -148,5 +150,14 @@
         }); 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        $(window).on('resize', function() {
+            if($(window).width() > 768) {
+                $('#workBlock').removeClass('flex-column');
+            }else{
+                $('#workBlock').addClass('flex-column');
+            }
+        })
+    </script>
 </body>
 </html>
